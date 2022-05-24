@@ -1,0 +1,5 @@
+croniter==1.3.5
+Faker==13.11.1
+Faker-Events==1.5.2
+python-dateutil==2.8.2
+six==1.16.0
