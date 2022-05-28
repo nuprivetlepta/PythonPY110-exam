@@ -112,14 +112,14 @@ def fields() -> dict:
     return dict_
 
 
-def main() -> dict:
+def boosk_gen() -> dict:
     """
     Складываем в новый словарь порядковый номер книги,
     далее добавляем данные о книгах.
     :return:  словарь, содержащий в себе еще один словарь.
     """
     wr_dict = {}
-    for i in range(0, 100):
+    for i in range(1, 101):
         models = MODEL
         pks = counter()
         dict_ = fields()
@@ -127,7 +127,11 @@ def main() -> dict:
     return wr_dict
 
 
-if __name__ == '__main__':
-
+def main() -> json:
     with open(OUTPUT_FILE, 'w', encoding='utf8') as f:
-        json.dump(main(), f, indent=4, ensure_ascii=False)
+        json.dump(boosk_gen(), f, indent=4, ensure_ascii=False)
+
+
+if __name__ == '__main__':
+    main()
+
